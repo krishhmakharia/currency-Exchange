@@ -44,11 +44,11 @@ btn.addEventListener("click",async (evt)=>{
     let data = await response.json();
     let rate = data.rates[toVal.value];
     let total = (amtValue * rate).toFixed(2);
-    let totalVal=parseInt(total);
+    
     // let totalVal=total.toString();
     // totalVal = totalVal.slice(0, totalVal.indexOf(".")+3);
     let msg = document.querySelector("#msg");
-    msg.innerText =`1 ${fromVal.value} = ${totalVal} ${toVal.value}`;
+    msg.innerText =`${amtValue} ${fromVal.value} = ${total} ${toVal.value}`;
     console.log(total);
     
 })
