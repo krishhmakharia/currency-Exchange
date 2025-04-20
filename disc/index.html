@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body class="tw-bg-blue-300">
+    <div class="tw-bg-white tw-rounded-lg tw-w-[80%] md:tw-w-1/3 tw-mt-8 tw-m-auto tw-p-8 tw-shadow-lg">
+        <h1 class="tw-text-4xl tw-font-extrabold tw-text-indigo-600 tw-mb-4 tw-text-center">
+            Currency Converter
+        </h1>
+        <form id="currency-form " class="tw-grid tw-grid-cols-3 gap-4 tw-justify-items-center ">
+            <div class="amount tw-col-span-3 tw-p-4">
+                <label for="amount" class="tw-text-xl tw-font-semibold ">Amount:</label>
+                <input  class="tw-bg-transparent tw-border-2 tw-border-blue-900 tw-text-black tw-p-2 tw-rounded-lg " type="number" id="amount" name="amount" value="100">  
+            </div>
+            <div class="dropdown tw-flex  tw-col-span-3 tw-p-4 tw-gap-3">
+                <div class="from tw-bg-gray-200 tw-p-4 tw-rounded-lg">
+                    <label for="from-currency"class="tw-font-semibold tw-text-center " > From:</label>
+                    <div>
+                        <img src="https://flagsapi.com/US/flat/64.png" alt="">
+                    </div>
+                    <select id="from-currency" name="from-currency" class="tw-bg-slate-500 tw-text-white tw-font-light tw-rounded-lg tw-p-2 tw-w-auto">
+                        
+                    </select>
+                </div>
+                <div class="tw-m-auto">
+                    <i class="fa-solid fa-arrow-right-arrow-left tw-text-xl"></i>
+                </div>
+                <div class=" to tw-bg-gray-200 tw-p-4 tw-rounded-lg ">
+                    <label for="to-currency" class="tw-font-semibold tw-text-center ">To:</label>
+                    <div>
+                        <img src="https://flagsapi.com/IN/flat/64.png" alt="">
+                    </div>
+                    <select id="to-currency" name="to-currency" class="tw-bg-slate-500 tw-text-white tw-font-light tw-rounded-lg tw-p-2 tw-w-auto" >
+                        
+                    </select>
+                </div>
+            </div>
+            <div class="msg tw-col-span-3 tw-p-6 tw-text-center tw-flex tw-flex-col ">
+                <p id="msg" class="tw-text-red-500 tw-text-md tw-font-light tw-col-span-2"> 1 USD = 87 INR</p>
+                <button class=" tw-mt-4 tw-bg-red-600 tw-text-white tw-rounded-lg tw-p-3 tw-text-lg tw-font-semibold hover:tw-shadow-lg hover:tw-bg-red-700">Get Exchange Rate</button>
+            </div>
+        </form>
+    </div>
+    <script type="module" src="main.js"></script>
+    <script  src="codes.js"></script>
+</body>
+</html>
